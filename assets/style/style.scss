@@ -25,7 +25,7 @@ html {
 }
 
 body {
-    font-family: 'Poppins', 'Arial', 'Helvetica', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     color: $color-dark;
     line-height: 1.7;
@@ -36,7 +36,7 @@ h2,
 h3,
 h4,
 h5 {
-    color: $color-black
+    color: $color-black;
 }
 
 h1 {
@@ -123,13 +123,15 @@ nav {
     position: fixed;
     z-index: 2;
 
+    background: $color-white;
+
     a {
         color: $color-black;
         font-size: 0.9rem;
         transition: all 400ms ease;
 
         &:hover {
-            color: $color-primary
+            color: $color-primary;
         }
     }
 }
@@ -150,4 +152,105 @@ nav button {
     justify-content: space-between;
     align-items: center;
     gap: 4rem;
+}
+
+/* =================== Header =================== */
+header {
+    height: calc(100vh - 5rem);
+    position: relative;
+    top: 5rem;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.header__container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    height: 100%;
+}
+
+.header__left {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    h3 {
+        color: $color-primary;
+        margin-bottom: 0.6rem;
+    }
+
+    p {
+        margin: 1.2rem 0 2rem;
+    }
+}
+
+.header__right {
+    position: relative;
+    height: 100%;
+}
+
+.header__socials {
+    position: absolute;
+    right: 0;
+    bottom: 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    font-size: 1.2rem;
+
+    a {
+        color: $color-white;
+        transition: all 400ms ease;
+    }
+
+    a:hover {
+        color: $color-black
+    }
+}
+
+.header__right-bg {
+    width: 70rem;
+    height: 70rem;
+    border-radius: 50%;
+    background: $color-primary;
+    position: absolute;
+    right: -30rem;
+    bottom: -30rem;
+}
+
+.header__image {
+    width: 82%;
+    position: absolute;
+    bottom: -1rem;
+    z-index: 1;
+}
+
+/* =================== Techs =================== */
+section {
+    #techs {
+        position: relative;
+        top: 5rem;
+        padding: 0;
+        background: $color-light;
+        margin: 0;
+    }
+}
+
+.techs__container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 3rem;
+    align-items: center;
+    margin: auto;
+
+    img {
+        filter: grayscale(1);
+    }
+}
+
+.techs__container {
+    span {
+        padding: 1.5rem;
+    }
 }
