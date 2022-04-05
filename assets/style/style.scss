@@ -105,7 +105,7 @@ section {
     &:hover {
         border-color: $color-primary;
         background: $color-light;
-        color: $color-primary
+        color: $color-primary;
     }
 }
 
@@ -205,7 +205,7 @@ header {
     }
 
     a:hover {
-        color: $color-black
+        color: $color-black;
     }
 }
 
@@ -253,4 +253,76 @@ section {
     span {
         padding: 1.5rem;
     }
+}
+
+/* =================== Services =================== */
+section {
+    #services {
+        margin-top: 8rem;
+    }
+}
+
+.services__container {
+    display: grid;
+    grid-template-columns: 25% auto;
+    gap: 2rem;
+}
+
+.services__left {
+    background: $color-primary;
+    padding: 2rem;
+    color: $color-light;
+
+    h1 {
+        font-size: 7rem;
+        font-weight: 600;
+        color: $color-white;
+    }
+
+    h4 {
+        line-height: 1.4;
+        font-weight: 600;
+        color: $color-white;
+    }
+}
+
+.services__right {
+    h2 {
+        margin-bottom: 2rem;
+    }
+}
+
+.services__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+}
+
+.services__card {
+    background: $color-light;
+    padding: 4rem 2rem;
+    cursor: default;
+    transition: all 400ms ease;
+
+    &:hover {
+        background: $color-primary;
+        color: $color-white;
+
+        * {
+            color: $color-white
+        }
+
+        a {
+            margin-left: 1rem;
+        }
+    }
+
+    h5 {
+        margin: 1rem 0;
+    }
+}
+
+.services__card-icon {
+    font-size: 2rem;
 }

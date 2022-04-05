@@ -274,4 +274,76 @@ section #techs {
 .techs__container span {
   padding: 1.5rem;
 }
+
+/* =================== Services =================== */
+section #services {
+  margin-top: 8rem;
+}
+
+.services__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 25% auto;
+      grid-template-columns: 25% auto;
+  gap: 2rem;
+}
+
+.services__left {
+  background: #7562e0;
+  padding: 2rem;
+  color: #f5f5f5;
+}
+
+.services__left h1 {
+  font-size: 7rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.services__left h4 {
+  line-height: 1.4;
+  font-weight: 600;
+  color: #fff;
+}
+
+.services__right h2 {
+  margin-bottom: 2rem;
+}
+
+.services__cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.services__card {
+  background: #f5f5f5;
+  padding: 4rem 2rem;
+  cursor: default;
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+
+.services__card:hover {
+  background: #7562e0;
+  color: #fff;
+}
+
+.services__card:hover * {
+  color: #fff;
+}
+
+.services__card:hover a {
+  margin-left: 1rem;
+}
+
+.services__card h5 {
+  margin: 1rem 0;
+}
+
+.services__card-icon {
+  font-size: 2rem;
+}
 /*# sourceMappingURL=style.css.map */
