@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+// Sass variables
+$color-primary: #7562e0;
+$color-primary-variant: rgba(102, 0, 255, 0.2);
+$color-white: #fff;
+$color-light: #f5f5f5;
+$color-black: #0f0f1b;
+$color-dark: #4b4a53;
+
+$container-width-lg: 82%;
+$container-width-md: 90%;
+$container-width-sm: 92%;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', 'Arial', 'Helvetica', sans-serif;
+    font-weight: 300;
+    color: $color-dark;
+    line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: $color-black
+}
+
+h1 {
+    font-size: 4.4rem;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+h4 {
+    font-size: 1.4rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+.lead {
+    width: 63%;
+    line-height: 1.5;
+    margin: 0 auto 3rem;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.container {
+    width: $container-width-lg;
+    max-width: 1800px;
+    max-width: 0 auto;
+}
+
+section {
+    padding: 6rem 0;
+    margin: 5rem 0;
+}
+
+.btn {
+    background: $color-black;
+    color: $color-white;
+    display: inline-block;
+    width: fit-content;
+    padding: 0.8rem 1.6rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 400ms ease;
+
+    &:hover {
+        background: $color-light;
+        color: $color-black;
+    }
+}
+
+.btn-primary {
+    background: $color-primary;
+    color: $color-white;
+
+    &:hover {
+        border-color: $color-primary;
+        background: $color-light;
+        color: $color-primary
+    }
+}
+
+.btn-lg {
+    padding: 1.1rem 2rem;
+    font-size: 1.2rem;
+}
+
+/* =================== Navbar =================== */
+nav {
+    width: 100vw;
+    height: 5rem;
+    display: grid;
+    place-items: center;
+    position: fixed;
+    z-index: 2;
+
+    a {
+        color: $color-black;
+        font-size: 0.9rem;
+        transition: all 400ms ease;
+
+        &:hover {
+            color: $color-primary
+        }
+    }
+}
+
+.nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*open and close buttons for tablets and phones*/
+nav button {
+    display: none;
+}
+
+.nav__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+}

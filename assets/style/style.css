@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', 'Arial', 'Helvetica', sans-serif;
+  font-weight: 300;
+  color: #4b4a53;
+  line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #0f0f1b;
+}
+
+h1 {
+  font-size: 4.4rem;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+.lead {
+  width: 63%;
+  line-height: 1.5;
+  margin: 0 auto 3rem;
+}
+
+img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container {
+  width: 82%;
+  max-width: 1800px;
+  max-width: 0 auto;
+}
+
+section {
+  padding: 6rem 0;
+  margin: 5rem 0;
+}
+
+.btn {
+  background: #0f0f1b;
+  color: #fff;
+  display: inline-block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.8rem 1.6rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+
+.btn:hover {
+  background: #f5f5f5;
+  color: #0f0f1b;
+}
+
+.btn-primary {
+  background: #7562e0;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  border-color: #7562e0;
+  background: #f5f5f5;
+  color: #7562e0;
+}
+
+.btn-lg {
+  padding: 1.1rem 2rem;
+  font-size: 1.2rem;
+}
+
+/* =================== Navbar =================== */
+nav {
+  width: 100vw;
+  height: 5rem;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  position: fixed;
+  z-index: 2;
+}
+
+nav a {
+  color: #0f0f1b;
+  font-size: 0.9rem;
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+
+nav a:hover {
+  color: #7562e0;
+}
+
+.nav__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*open and close buttons for tablets and phones*/
+nav button {
+  display: none;
+}
+
+.nav__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4rem;
+}
+/*# sourceMappingURL=style.css.map */
