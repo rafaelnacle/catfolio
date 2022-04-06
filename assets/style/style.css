@@ -611,10 +611,16 @@ footer {
     gap: 0;
     z-index: 3;
     display: none;
+    -webkit-perspective: 400px;
+            perspective: 400px;
   }
   .nav__menu li {
     width: 100%;
     height: 5.4rem;
+    -webkit-animation: flipNavItem 200ms 0s ease forwards;
+            animation: flipNavItem 200ms 0s ease forwards;
+    -webkit-transform-origin: top;
+            transform-origin: top;
   }
   .nav__menu li a {
     background: #7562e0;
@@ -636,6 +642,44 @@ footer {
   .nav__menu li a:hover {
     background: #f5f5f5;
     color: #0f0f1b;
+  }
+  .nav__menu li:nth-child(2) {
+    -webkit-animation-delay: 100ms;
+            animation-delay: 100ms;
+  }
+  .nav__menu li:nth-child(3) {
+    -webkit-animation-delay: 200ms;
+            animation-delay: 200ms;
+  }
+  .nav__menu li:nth-child(4) {
+    -webkit-animation-delay: 300ms;
+            animation-delay: 300ms;
+  }
+  .nav__menu li:nth-child(5) {
+    -webkit-animation-delay: 400ms;
+            animation-delay: 400ms;
+  }
+  @-webkit-keyframes flipNavItem {
+    from {
+      -webkit-transform: rotateX(90deg);
+              transform: rotateX(90deg);
+      opacity: 0;
+    }
+    to {
+      -webkit-transform: rotateX(0deg);
+              transform: rotateX(0deg);
+    }
+  }
+  @keyframes flipNavItem {
+    from {
+      -webkit-transform: rotateX(90deg);
+              transform: rotateX(90deg);
+      opacity: 0;
+    }
+    to {
+      -webkit-transform: rotateX(0deg);
+              transform: rotateX(0deg);
+    }
   }
 }
 
