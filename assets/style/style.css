@@ -858,6 +858,9 @@ footer {
     display: grid;
     place-items: center;
   }
+  .techs__container img {
+    width: 150%;
+  }
   /* =================== SERVICES =================== */
   .services__cards {
     -ms-grid-columns: 1fr;
