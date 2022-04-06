@@ -491,4 +491,153 @@ section #services {
   overflow: hidden;
   display: block;
 }
+
+/* =================== Contact =================== */
+#contact {
+  background: #7562e0;
+  color: #fff;
+  margin: 0;
+}
+
+.contact__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 8rem;
+  font-size: 0.9rem;
+}
+
+.contact__container h2 {
+  color: #fff;
+}
+
+.contact__container p {
+  margin: 1rem 0 2rem;
+}
+
+.contact__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+.contact__socials a {
+  color: #fff;
+  font-size: 1.3rem;
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+
+.contact__socials a:hover {
+  color: #0f0f1b;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+form input,
+form textarea {
+  padding: 1rem;
+}
+
+footer {
+  text-align: center;
+  background: #7562e0;
+  padding: 1.2rem 0;
+  color: #fff;
+  border-top: 1px solid #0f0f1b;
+}
+
+/* =================== MEDIA QUERIES (TABLETS) =================== */
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 3.6rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  .container {
+    width: 90%;
+  }
+  .lead {
+    margin-top: 0.6rem;
+  }
+  /* =================== NAVBAR =================== */
+  nav {
+    background: #0f0f1b;
+  }
+  nav button {
+    display: inline-block;
+    margin-right: 1.4rem;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.4rem;
+  }
+  nav #close-menu-btn {
+    display: none;
+  }
+  .nav__container {
+    position: relative;
+    width: 100vw;
+  }
+  .nav__logo h3 {
+    color: #fff;
+    margin-left: 2rem;
+  }
+  .nav__menu {
+    position: fixed;
+    top: 5rem;
+    right: 0;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 18rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0;
+    z-index: 3;
+    display: none;
+  }
+  .nav__menu li {
+    width: 100%;
+    height: 5.4rem;
+  }
+  .nav__menu li a {
+    background: #7562e0;
+    -webkit-box-shadow: -2rem 2rem 2rem rgba(0, 0, 0, 0.2);
+            box-shadow: -2rem 2rem 2rem rgba(0, 0, 0, 0.2);
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .nav__menu li a:hover {
+    background: #f5f5f5;
+    color: #0f0f1b;
+  }
+}
+
+/* =================== MEDIA QUERIES (MOBILE) =================== */
 /*# sourceMappingURL=style.css.map */
