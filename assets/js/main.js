@@ -31,3 +31,35 @@ window.addEventListener('scroll', () => {
     document.querySelector('nav').classList.toggle('window-scroll', window.scrollY > 0);
 });
 
+// fetches testimonials from the testimonials array
+const fetchTestimonials = () => {
+    let testimonialsContainer = document.querySelector('.testimonials__container');
+    testimonialsContainer.innerHTML = ''
+
+    // loop through the array and get the testimonials
+    testimonials.forEach(testimonial => {
+        const newTestimonial = document.createElement('article')
+        newTestimonial.className = 'testimonial';
+        newTestimonial.innerHTML = `
+        <p>
+            "${testimonial.quote}"
+        </p>
+        <div class="testimonial__client">
+            <span class="avatar">
+                <img src="./assets/images/${testimonial.avatar}.jpg">
+            </span>
+            <div class="testimonial__work">
+                <p><b>${testimonial.name}</b></p>
+                <small>${testimonial.title}</small >
+            </div >
+        </div >
+    `
+
+        testimonialsContainer.append(newTestimonial)
+    })
+
+
+}
+
+window.addEventListener('load', fetchTestimonials)
+
