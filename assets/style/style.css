@@ -492,6 +492,13 @@ section #services {
   display: block;
 }
 
+.testimonial__client {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
 /* =================== Contact =================== */
 #contact {
   background: #7562e0;
@@ -617,6 +624,7 @@ footer {
   .nav__menu li {
     width: 100%;
     height: 5.4rem;
+    opacity: 0;
     -webkit-animation: flipNavItem 200ms 0s ease forwards;
             animation: flipNavItem 200ms 0s ease forwards;
     -webkit-transform-origin: top;
@@ -663,25 +671,215 @@ footer {
     from {
       -webkit-transform: rotateX(90deg);
               transform: rotateX(90deg);
-      opacity: 0;
     }
     to {
       -webkit-transform: rotateX(0deg);
               transform: rotateX(0deg);
+      opacity: 1;
     }
   }
   @keyframes flipNavItem {
     from {
       -webkit-transform: rotateX(90deg);
               transform: rotateX(90deg);
-      opacity: 0;
     }
     to {
       -webkit-transform: rotateX(0deg);
               transform: rotateX(0deg);
+      opacity: 1;
     }
+  }
+  /* =================== HEADER =================== */
+  header {
+    height: 100%;
+    padding: 14rem 0 0;
+  }
+  .header__container {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    height: 100%;
+  }
+  .header__left {
+    margin-bottom: 6rem;
+  }
+  .header__right {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    height: 100%;
+  }
+  .header__right-bg {
+    width: 30rem;
+    height: 30rem;
+    right: 50%;
+    bottom: 50%;
+    -webkit-transform: translate(50%, 50%);
+            transform: translate(50%, 50%);
+  }
+  .header__image {
+    bottom: -1rem;
+    width: 80%;
+  }
+  .header__socials {
+    bottom: 4rem;
+  }
+  .header__socials a {
+    color: #7562e0;
+  }
+  /* =================== COMPANIES =================== */
+  .techs__container {
+    gap: 0;
+  }
+  .techs__container span {
+    padding: 1.5rem;
+  }
+  /* =================== SERVICES =================== */
+  .services__container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .services__left {
+    display: none;
+  }
+  .services__cards {
+    gap: 1rem;
+  }
+  /* =================== PORTFOLIO =================== */
+  .portfolio__head h3 {
+    width: 40%;
+  }
+  .portfolio__head-right {
+    width: auto;
+  }
+  /* =================== TESTIMONIALS =================== */
+  .testimonials__container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  /* =================== CONTACT =================== */
+  .contact__container {
+    gap: 2rem;
+  }
+  .contact__socials a {
+    font-size: 1.7rem;
   }
 }
 
 /* =================== MEDIA QUERIES (MOBILE) =================== */
+@media screen and (max-width: 600px) {
+  .container {
+    width: 96%;
+  }
+  section {
+    padding: 4rem 0;
+    margin: 4rem 0;
+  }
+  h1 {
+    font-size: 2.8rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+  .btn-lg {
+    font-size: 1rem;
+  }
+  .lead {
+    width: 96%;
+  }
+  /* =================== NAVBAR =================== */
+  nav button {
+    margin: 0;
+    font-size: 1.9rem;
+  }
+  .nav__logo h3 {
+    margin-left: 4px;
+  }
+  /* =================== HEADER =================== */
+  header {
+    height: 100vh;
+    padding: 0;
+  }
+  .header__container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    margin-top: 4.4rem;
+    gap: 0;
+  }
+  .header__left {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .header__left p {
+    margin: 0.5rem 0 1.2rem;
+  }
+  .header__image {
+    position: relative;
+    top: -2rem;
+  }
+  .header__right-bg {
+    bottom: 36%;
+  }
+  .header__socials {
+    position: absolute;
+    z-index: 1;
+    bottom: 11rem;
+  }
+  .header__socials a {
+    color: #fff;
+  }
+  /* =================== TECHS =================== */
+  .techs {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .techs span {
+    height: 5rem;
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+  }
+  /* =================== SERVICES =================== */
+  .services__cards {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  /* =================== PORTFOLIO =================== */
+  .portfolio__head {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1fr;
+  }
+  .portfolio__head h3 {
+    width: 96%;
+  }
+  .portfolio__head-right {
+    width: 96%;
+  }
+  .portfolio__projects {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  /* =================== TESTIMONIALS =================== */
+  .testimonial {
+    padding: 1rem;
+  }
+  /* =================== CONTACT =================== */
+  .contact__container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  .contact__socials {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 /*# sourceMappingURL=style.css.map */

@@ -18,7 +18,7 @@ $color-dark: #4b4a53;
 
 $container-width-lg: 82%;
 $container-width-md: 90%;
-$container-width-sm: 92%;
+$container-width-sm: 96%;
 $transition-all-ease: all 400ms ease;
 
 html {
@@ -434,7 +434,6 @@ section {
         color: $color-primary;
         box-shadow: 0 2rem 2rem $color-primary-variant;
         z-index: 1;
-
     }
 }
 
@@ -444,6 +443,11 @@ section {
     border-radius: 50%;
     overflow: hidden;
     display: block;
+}
+
+.testimonial__client {
+    display: flex;
+    gap: 1rem;
 }
 
 /* =================== Contact =================== */
@@ -567,6 +571,7 @@ footer {
         li {
             width: 100%;
             height: 5.4rem;
+            opacity: 0;
             animation: flipNavItem 200ms 0s ease forwards;
             transform-origin: top;
 
@@ -607,15 +612,244 @@ footer {
     @keyframes flipNavItem {
         from {
             transform: rotateX(90deg);
-            opacity: 0;
+
         }
 
         to {
             transform: rotateX(0deg);
+            opacity: 1;
         }
     }
+
+    /* =================== HEADER =================== */
+    header {
+        height: 100%;
+        padding: 14rem 0 0;
+    }
+
+    .header__container {
+        align-items: flex-end;
+        height: 100%;
+    }
+
+    .header__left {
+        margin-bottom: 6rem;
+    }
+
+    .header__right {
+        align-self: flex-end;
+        height: 100%;
+    }
+
+    .header__right-bg {
+        width: 30rem;
+        height: 30rem;
+        right: 50%;
+        bottom: 50%;
+        transform: translate(50%, 50%);
+    }
+
+    .header__image {
+        bottom: -1rem;
+        width: 80%;
+    }
+
+    .header__socials {
+        bottom: 4rem;
+
+        a {
+            color: $color-primary;
+        }
+    }
+
+    /* =================== COMPANIES =================== */
+    .techs__container {
+        gap: 0;
+
+        span {
+            padding: 1.5rem;
+        }
+    }
+
+    /* =================== SERVICES =================== */
+    .services__container {
+        grid-template-columns: 1fr;
+    }
+
+    .services__left {
+        display: none;
+    }
+
+    .services__cards {
+        gap: 1rem;
+    }
+
+    /* =================== PORTFOLIO =================== */
+
+    .portfolio__head {
+        h3 {
+            width: 40%;
+        }
+    }
+
+    .portfolio__head-right {
+        width: auto;
+    }
+
+    /* =================== TESTIMONIALS =================== */
+    .testimonials__container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    /* =================== CONTACT =================== */
+    .contact__container {
+        gap: 2rem;
+    }
+
+    .contact__socials {
+        a {
+            font-size: 1.7rem;
+        }
+    }
+
 }
 
 
 
 /* =================== MEDIA QUERIES (MOBILE) =================== */
+@media screen and(max-width: 600px) {
+    .container {
+        width: $container-width-sm;
+    }
+
+    section {
+        padding: 4rem 0;
+        margin: 4rem 0;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .btn-lg {
+        font-size: 1rem;
+    }
+
+    .lead {
+        width: $container-width-sm;
+    }
+
+    /* =================== NAVBAR =================== */
+    nav {
+        button {
+            margin: 0;
+            font-size: 1.9rem;
+        }
+    }
+
+    .nav__logo {
+        h3 {
+            margin-left: 4px;
+        }
+    }
+
+    /* =================== HEADER =================== */
+    header {
+        height: 100vh;
+        padding: 0;
+    }
+
+    .header__container {
+        grid-template-columns: 1fr;
+        margin-top: 4.4rem;
+        gap: 0;
+    }
+
+    .header__left {
+        text-align: center;
+        margin-bottom: 2rem;
+
+        p {
+            margin: 0.5rem 0 1.2rem;
+        }
+    }
+
+    .header__image {
+        position: relative;
+        top: -2rem;
+    }
+
+    .header__right-bg {
+        bottom: 36%;
+    }
+
+    .header__socials {
+        position: absolute;
+        z-index: 1;
+        bottom: 11rem;
+
+        a {
+            color: $color-white;
+        }
+    }
+
+    /* =================== TECHS =================== */
+    .techs {
+        grid-template-columns: repeat(3, 1fr);
+
+        span {
+            height: 5rem;
+            display: grid;
+            place-items: center;
+        }
+    }
+
+    /* =================== SERVICES =================== */
+    .services__cards {
+        grid-template-columns: 1fr;
+    }
+
+    /* =================== PORTFOLIO =================== */
+    .portfolio__head {
+        flex-direction: column;
+        gap: 1fr;
+
+        h3 {
+            width: $container-width-sm;
+        }
+    }
+
+    .portfolio__head-right {
+        width: $container-width-sm;
+    }
+
+    .portfolio__projects {
+        grid-template-columns: 1fr;
+    }
+
+    /* =================== TESTIMONIALS =================== */
+    .testimonial {
+        padding: 1rem;
+    }
+
+    /* =================== CONTACT =================== */
+    .contact__container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .contact__socials {
+        justify-content: center;
+    }
+
+}
